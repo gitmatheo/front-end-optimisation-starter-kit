@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Dev Insider - site to optimise - homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Dev Insider demo page for learning purposes.">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+
+
+    <link href="/assets/css/homework/app.css" rel="stylesheet">
+    <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <link href="/favicon.ico" rel="icon">
+
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500" rel="stylesheet">
+    <script src="//use.typekit.net/lna1ryl.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
+    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
+    <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
+    <!-- End Google Tag Manager -->
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </head>
+  <body>
+
+    <div class="overlay"></div>
+    <div class="search">
+      <div class="layout3 text text--bg-grey">
+        <a class="btn-close search__btn-close" href="javascript:;">Close</a>
+        <p>Search and hit enter</p>
+        <form action="/search" method="get">
+          <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?">
+          <button class="search__submit" type="submit" title="Submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <nav class="l-navbar">
+      <a class="logo" href="/">
+        <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider">
+      </a>
+
+      <ul class="navbar-menu">
+        <li class="navbar-menu__dropdown"><a id="item-1" href="#">Platform</a></li>
+        <li class="navbar-menu__dropdown"><a id="item-2" href="#">Solutions</a></li>
+        <li class="navbar-menu__dropdown"><a id="item-3" href="#">Services</a></li>
+        <li><a title="Log in" href="/">Log in</a></li>
+        <li><a title="Contact" href="/">Contact</a></li>
+        <li><a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a></li>
+      </ul>
+      <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
+    </nav>
+    <div class="l-megamenu">
+      <div class="layout">
+        <a class="btn-close js-close-megamenu" href="">Close</a>
+        <div class="l-megamenu__layer" id="megamenu-item-1">
+          <div class="col-65 l-megamenu__links left">
+            <ul>
+              <li><a href="/">Platform Overview</a></li>
+              <li><a href="/">Management Center</a></li>
+              <li>
+                <a title="Modules" href="/">Modules</a>
+                <ul>
+                  <li><a href="/">Capture</a></li>
+                  <li><a href="/">Storage</a></li>
+                  <li><a href="/">Interaction Analytics</a></li>
+                </ul>
+              </li>
+              <li><a title="Cloud" href="/">Cloud</a></li>
+            </ul>
+          </div>
+          <div class="col-35 text right">
+            <div>
+              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
+              <h2 class="headline-2">Some super interesting resource to download</h2>
+              <p class="small-text"><img src="/assets/images/homework/post.png" class="l-megamenu__image" alt=""> Just download it and enjoy.
+              </p>
+              <p>
+                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="l-megamenu__layer" id="megamenu-item-2">
+          <div class="col-65 l-megamenu__links left">
+            <ul>
+              <li><a href="/">Solution Overview</a></li>
+              <li>
+                <a title="Call recording" href="/">Call recording</a>
+                <ul>
+                  <li><a title="Mobile recording" href="/">Mobile recording</a></li>
+                  <li><a title="Fixed-Line recording" href="/">Fixed-Line recording</a></li>
+                  <li><a title="Multi-channel recording" href="/">Multi-channel recording</a></li>
+                </ul>
+              </li>
+              <li><a title="Interaction Analytics" href="/">Interaction Analytics</a></li>
+              <li>
+                <a title="PCI Compliance" href="/">PCI Compliance</a>
+                <ul>
+                  <li><a title="Live - DTMF" href="/">Live - DTMF</a></li>
+                  <li><a title="Automate" href="/">Automate</a></li>
+                  <li><a title="Archive" href="/">Archive</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-35 text right">
+            <div>
+              <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
+              <h2 class="headline-2">PCI DSS and the contact center</h2>
+              <p class="small-text"><img src="/assets/images/homework/news-example.jpg" class="l-megamenu__image" alt=""> Some text is here so you are impressed and you will click the button below.
+              </p>
+              <p>
+                <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="l-megamenu__layer" id="megamenu-item-3">
+          <div class="col-65 l-megamenu__links left">
+            <ul>
+              <li><a title="Support" href="/">Support</a></li>
+              <li><a title="Training" href="/">Training</a></li>
+              <li><a title="Consulting" href="/">Consulting</a></li>
+            </ul>
+          </div>
+          <div class="col-35 text right">
+            <div>
+              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
+              <h2 class="headline-2">Report about mobile payment gateways</h2>
+              <p class="small-text"><img src="/assets/images/homework/post2.png" class="l-megamenu__image" alt=""> An MNO service that doesn&#39;t require a SIM change
+              </p>
+              <p>
+                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inner-page inner-page--blue-fill">
+
+      <div class="layout4">
+
+          <header class="inner-page--blue-fill__header inner-page--blue-fill__header--news text text--bg-blue" role="banner">
+            <h1 class="headline-1">News</h1>
+          </header>
+
+          <div id="js-cta-ad"></div>
+
+          <div class="inner-page__container">
+
+              <div class="col-75 left">
+
+                  <div class="news-list news-list--main">
+                      <article>
+                          <div>
+                              <header>
+                                  <div class="item__time-cat"><time datetime="2020-06-30T12:00">Jun 30, 2020</time></div>
+                                  <h2 class="headline-2">
+                                    <a href="/">Payment systems review</a>
+                                  </h2>
+                              </header>
+
+                              <figure>
+                                  <img src="/assets/images/homework/post5-large-news.png" alt="">
+                              </figure>
+
+                              <div class="text">
+                                <p class="small-text">
+                                    Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi.
+                                </p>
+                              </div>
+                              
+                              <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+                              
+                              <ul class="social-media social-media--share social-media--white">
+                                  <li>
+                                      <a href="javascript:;">
+                                          <span class="social-media__ico social-media__share"><span><span>Share</span></span></span>
+                                      </a>
+
+                                      <ul>
+                                          <li><a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=/"><span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span></a></li>
+
+                                          <li><a title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=/"><span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span></a></li>
+
+                                          <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=/"><span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span></a></li>
+
+                                          <li><a title="Share on G+" href="https://plus.google.com/share?url=/"><span class="social-media__ico social-media__gplus"><span><span>G+</span></span></span></a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </div>
+                      </article>
+                      
+                      <div class="inner-page__group news-list__2-cols">
+                          <article>
+                              <div>
+                                  <header>
+                                      <div class="item__time-cat"><time datetime="2020-05-22T12:00">May 22, 2020</time></div>
+                                      <h3 class="headline-7">
+                                        <a href="/">Cum sociis natoque penatibus et ultrices volutpat</a>
+                                      </h3>
+                                  </header>
+
+                                  <figure>
+                                      <img src="/assets/images/homework/post4.png" alt="">
+                                  </figure>
+                                      
+                                  <div class="text">
+                                      <p class="small-text">
+                                        Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer.
+                                      </p>
+                                  </div>
+                                  
+                                  <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+
+                                  <ul class="social-media social-media--share social-media--white">
+                                      <li>
+                                          <a href="javascript:;">
+                                            <span class="social-media__ico social-media__share"><span><span>Share</span></span></span>
+                                          </a>
+                                          <ul>
+                                              <li><a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=/"><span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span></a></li>
+
+                                              <li><a title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=/"><span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span></a></li>
+
+                                              <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=/"><span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span></a></li>
+
+                                              <li><a title="Share on G+" href="https://plus.google.com/share?url=/"><span class="social-media__ico social-media__gplus"><span><span>G+</span></span></span></a></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </article>
+
+                          <article>
+                              <div>
+                                  <header>
+                                      <div class="item__time-cat"><time datetime="2020-05-22T12:00">May 22, 2020</time></div>
+                                      <h3 class="headline-7">
+                                        <a href="/">Cum sociis natoque penatibus et ultrices volutpat</a>
+                                      </h3>
+                                  </header>
+
+                                  <figure>
+                                      <img src="/assets/images/homework/post5.png" alt="">
+                                  </figure>
+                                      
+                                  <div class="text">
+                                      <p class="small-text">
+                                        Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer.
+                                      </p>
+                                  </div>
+                                  
+                                  <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+
+                                  <ul class="social-media social-media--share social-media--white">
+                                      <li>
+                                          <a href="javascript:;">
+                                            <span class="social-media__ico social-media__share"><span><span>Share</span></span></span>
+                                          </a>
+                                          <ul>
+                                              <li><a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=/"><span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span></a></li>
+
+                                              <li><a title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=/"><span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span></a></li>
+
+                                              <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=/"><span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span></a></li>
+
+                                              <li><a title="Share on G+" href="https://plus.google.com/share?url=/"><span class="social-media__ico social-media__gplus"><span><span>G+</span></span></span></a></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </article>
+                        
+                        
+                        </div><div class="inner-page__group news-list__2-cols">
+                          <article>
+                              <div>
+                                  <header>
+                                      <div class="item__time-cat"><time datetime="2020-05-22T12:00">May 22, 2020</time></div>
+                                      <h3 class="headline-7">
+                                        <a href="/">Cum sociis natoque penatibus et ultrices volutpat</a>
+                                      </h3>
+                                  </header>
+
+                                  <figure>
+                                      <img src="/assets/images/homework/post3.png" alt="">
+                                  </figure>
+                                      
+                                  <div class="text">
+                                      <p class="small-text">
+                                        Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer.
+                                      </p>
+                                  </div>
+                                  
+                                  <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+
+                                  <ul class="social-media social-media--share social-media--white">
+                                      <li>
+                                          <a href="javascript:;">
+                                            <span class="social-media__ico social-media__share"><span><span>Share</span></span></span>
+                                          </a>
+                                          <ul>
+                                              <li><a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=/"><span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span></a></li>
+
+                                              <li><a title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=/"><span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span></a></li>
+
+                                              <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=/"><span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span></a></li>
+
+                                              <li><a title="Share on G+" href="https://plus.google.com/share?url=/"><span class="social-media__ico social-media__gplus"><span><span>G+</span></span></span></a></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </article>
+
+                          <article>
+                            <div>
+                                <header>
+                                    <div class="item__time-cat"><time datetime="2020-05-22T12:00">May 22, 2020</time></div>
+                                    <h3 class="headline-7">
+                                      <a href="/">Cum sociis natoque penatibus et ultrices volutpat</a>
+                                    </h3>
+                                </header>
+
+                                <figure>
+                                    <img src="/assets/images/homework/post2.png" alt="">
+                                </figure>
+                                    
+                                <div class="text">
+                                    <p class="small-text">
+                                      Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer.
+                                    </p>
+                                </div>
+                                
+                                <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+
+                                <ul class="social-media social-media--share social-media--white">
+                                    <li>
+                                        <a href="javascript:;">
+                                          <span class="social-media__ico social-media__share"><span><span>Share</span></span></span>
+                                        </a>
+                                        <ul>
+                                            <li><a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=/"><span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span></a></li>
+
+                                            <li><a title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=/"><span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span></a></li>
+
+                                            <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=/"><span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span></a></li>
+
+                                            <li><a title="Share on G+" href="https://plus.google.com/share?url=/"><span class="social-media__ico social-media__gplus"><span><span>G+</span></span></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        
+                        
+                        
+                        </div><div class="pagination"><ul><li><a class="active" title="Go to 1 page" href="/news/corporate/">1</a></li><li><a title="Go to 2 page" href="/news/corporate/page/1">2</a></li><li><a title="Go to 3 page" href="/news/corporate/page/2">3</a></li><li>...</li><li><a title="Go to 4 page" href="/news/corporate/page/3">4</a></li><li><a class="pagination__next" title="Go to next page" href="/news/corporate/page/1">next</a></li></ul></div>
+              </div>
+
+          </div>
+
+
+
+          <aside class="col-25 right">
+                  <ul class="inner-page__submenu inner-page__submenu--sticky">
+                      <li><a title="All news" href="/news/">All news</a></li><li><a title="Press" href="/news/press-releases/">Press</a></li><li class="active"><a title="Corporate" href="/news/corporate/">Corporate</a></li><li><a title="Events" href="/news/events/">Events</a></li>
+                  </ul>
+           </aside>
+      </div>
+  </div>
+
+</div>
+  <!-- footer -->
+
+    <footer class="l-footer">
+      <div class="l-footer__top">
+        <div class="layout">
+          <div class="col-15 left">
+            <a title="Home" href="/"><img src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42"></a>
+          </div>
+          <div class="col-85 l-footer__top-links right">
+            <ul>
+              <li>
+                <span>Platform</span>
+                <ul>
+                  <li><a title="Platform Overview" href="">Platform Overview</a></li>
+                  <li><a title="Management Center" href="/">Management Center</a></li>
+                  <li>
+                    <a title="Modules" href="">Modules</a>
+                    <ul>
+                      <li><a title="Communications Capture" href="/">Capture</a></li>
+                      <li><a title="Communications Storage" href="/">Storage</a></li>
+                      <li><a title="Interaction Analytics" href="/">Analytics</a></li>
+                    </ul>
+                  </li>
+                  <li><a title="Cloud" href="/">Cloud</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>Solutions</span>
+                <ul>
+                  <li><a title="Solutions Overview" href="">Solution Overview</a></li>
+                  <li>
+                    <a title="Call recording" href="">Call recording</a>
+                    <ul>
+                      <li><a title="Mobile recording" href="">Mobile recording</a></li>
+                      <li><a title="Fixed-Line recording" href="">Fixed-Line recording</a></li>
+                      <li><a title="Multi-channel recording" href="">Multi-channel recording</a></li>
+                    </ul>
+                  </li>
+                  <li><a title="Interaction Analytics" href="">Interaction Analytics</a></li>
+                  <li>
+                    <a title="PCI Compliance" href="">PCI Compliance</a>
+                    <ul>
+                      <li><a title="Live - DTMF" href="">Live - DTMF</a></li>
+                      <li><a title="Automate" href="">Automate</a></li>
+                      <li><a title="Archive" href="">Archive</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>Services</span>
+                <ul>
+                  <li><a title="Support" href="">Support</a></li>
+                  <li><a title="Training" href="">Training</a></li>
+                  <li><a title="Consulting" href="">Consulting</a></li>
+                </ul>
+                <span class="l-footer__top-links__partners">Partners</span>
+                <ul>
+                  <li><a title="Partners Overview" href="">Partners Overview</a></li>
+                  <li><a title="Solution Partners" href="">Solution Partners</a></li>
+                  <li><a title="Consulting Partners" href="">Consulting Partners</a></li>
+                  <li><a title="Resellers" href="">Resellers</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>About Us</span>
+                <ul>
+                  <li><a title="About" href="">About</a></li>
+                  <li><a title="Leadership Team" href="">Leadership Team</a></li>
+                  <li><a title="News" href="">News</a></li>
+                  <li><a title="Events" href="">Events</a></li>
+                  <li><a title="Customers" href="">Customers</a></li>
+                  <li><a title="Careers" href="">Careers</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>Resources</span>
+                <ul>
+                  <li><a title="All Resources" href="">Resources</a></li>
+                  <li><a title="White papers" href="">White papers</a></li>
+                  <li><a title="Datasheets" href="">Datasheets</a></li>
+                  <li><a title="eBooks" href="">eBooks</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>Follow us</span>
+                <ul class="social-media social-media--blue">
+                  <li>
+                    <a rel="external" title="Our profile at Twitter" href="">
+                    <span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="external" title="Our profile at Google+" href="">
+                    <span class="social-media__ico social-media__gplus"><span><span>Google+</span></span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="external" title="Our profile at Facebook" href="">
+                    <span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="external" title="Our profile at LinkedIn" href="">
+                    <span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__bottom">
+        <div class="layout">
+          <div class="col-50 l-footer__bottom-copyright left">
+            <span>© 20XX Web Dev Insider page to optimise</span> 
+            <span><a title="Privacy &amp; Cookie policy" href="/">Privacy &amp; Cookie policy</a></span> 
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>

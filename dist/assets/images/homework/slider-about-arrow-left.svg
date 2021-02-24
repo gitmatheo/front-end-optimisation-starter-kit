@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="34px" height="34px" viewBox="0 0 34 34" enable-background="new 0 0 34 34" xml:space="preserve">
+
+<style>
+
+    svg {
+      pointer:cursor;
+    }
+
+    .outerCirc {
+          fill: #D3D3D3;
+          transition: all 0.2s;
+      }   
+
+      .arrow {
+          transition: all 0.2s;
+      }  
+
+
+      svg:hover .outerCirc {
+          fill: #4C5357;
+      } 
+
+      svg:active .arrow {
+          transform: translate(-2px,0);
+      }  
+</style>
+
+<circle class="outerCirc" fill="#D3D3D3" cx="17" cy="17" r="17"/>
+<circle fill="#FFFFFF" cx="17" cy="17" r="15"/>
+<polygon class="arrow" fill="#4C5357" points="11.4,17 18.5,23.6 20.1,21.8 14.9,17 20.1,12.2 18.5,10.4 "/>
+</svg>
