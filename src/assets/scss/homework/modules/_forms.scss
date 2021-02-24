@@ -1,0 +1,115 @@
+
+.form {
+    position: relative;
+}
+
+.form form:after {
+    @include clearfix();
+}
+
+
+.form__layer-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 102%;
+    height: 102%;
+    background: rgba(255, 255, 255, .6) url(/assets/images/homework/loading-anim.gif) center center no-repeat;
+    display: none;
+}
+
+
+
+.form__row {
+    float:left;
+    width: 100%;
+    clear:both;
+    padding: 9px 0;
+
+
+    label {
+        font-size: .945em;
+        font-weight: 600;
+        line-height: 2;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select {
+        width: 93%;
+        padding: 10px 3.5%;
+
+        background: #fff;
+        border: 1px solid #fff;
+        @include border-radius(3px);
+        @include box-shadow(0px, 0px, 10px,0px, rgba(50, 50, 50, 0.2));
+        @include transition(all, 0.3s, ease);
+
+        font-size: 15px;
+    }
+
+    textarea {
+        width: 95%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        min-height: 160px;
+        resize: vertical;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="number"]:focus,
+    textarea:focus,
+    select:focus {
+        border-color: $blue2;
+        @include box-shadow(0px, 0px, 10px,0px, rgba(40, 179, 220, 0.6));
+    }
+
+    .btn span {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+
+}
+
+
+.form__row--required {
+    color: $red;
+}
+
+
+
+.form__response {
+    @include border-radius(5px);
+
+    &.ok {
+        background: #58a004;
+    }
+
+    &.error {
+        background: #cb2312;
+    }
+
+    p {
+        padding: 10px;
+        margin-bottom: 30px !important;
+
+        font-size: 1em !important;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+#contact-mail {
+    display: none;
+}

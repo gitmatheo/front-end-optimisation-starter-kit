@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Dev Insider - site to optimise - homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Dev Insider demo page for learning purposes.">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+
+
+    <link href="/assets/css/homework/app.css" rel="stylesheet">
+    <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <link href="/favicon.ico" rel="icon">
+
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500" rel="stylesheet">
+    <script src="//use.typekit.net/lna1ryl.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+    <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
+    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
+    <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
+    <!-- End Google Tag Manager -->
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </head>
+  <body>
+
+    <div class="overlay"></div>
+    <div class="search">
+      <div class="layout3 text text--bg-grey">
+        <a class="btn-close search__btn-close" href="javascript:;">Close</a>
+        <p>Search and hit enter</p>
+        <form action="/search" method="get">
+          <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?">
+          <button class="search__submit" type="submit" title="Submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <nav class="l-navbar">
+      <a class="logo" href="/">
+        <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider">
+      </a>
+
+      <ul class="navbar-menu">
+        <li class="navbar-menu__dropdown"><a id="item-1" href="#">Platform</a></li>
+        <li class="navbar-menu__dropdown"><a id="item-2" href="#">Solutions</a></li>
+        <li class="navbar-menu__dropdown"><a id="item-3" href="#">Services</a></li>
+        <li><a title="Log in" href="/">Log in</a></li>
+        <li><a title="Contact" href="/">Contact</a></li>
+        <li><a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a></li>
+      </ul>
+      <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
+    </nav>
+    <div class="l-megamenu">
+      <div class="layout">
+        <a class="btn-close js-close-megamenu" href="">Close</a>
+        <div class="l-megamenu__layer" id="megamenu-item-1">
+          <div class="col-65 l-megamenu__links left">
+            <ul>
+              <li><a href="/">Platform Overview</a></li>
+              <li><a href="/">Management Center</a></li>
+              <li>
+                <a title="Modules" href="/">Modules</a>
+                <ul>
+                  <li><a href="/">Capture</a></li>
+                  <li><a href="/">Storage</a></li>
+                  <li><a href="/">Interaction Analytics</a></li>
+                </ul>
+              </li>
+              <li><a title="Cloud" href="/">Cloud</a></li>
+            </ul>
+          </div>
+          <div class="col-35 text right">
+            <div>
+              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
+              <h2 class="headline-2">Some super interesting resource to download</h2>
+              <p class="small-text"><img src="/assets/images/homework/post.png" class="l-megamenu__image" alt=""> Just download it and enjoy.
+              </p>
+              <p>
+                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="l-megamenu__layer" id="megamenu-item-2">
+          <div class="col-65 l-megamenu__links left">
+            <ul>
+              <li><a href="/">Solution Overview</a></li>
+              <li>
+                <a title="Call recording" href="/">Call recording</a>
+                <ul>
+                  <li><a title="Mobile recording" href="/">Mobile recording</a></li>
+                  <li><a title="Fixed-Line recording" href="/">Fixed-Line recording</a></li>
+                  <li><a title="Multi-channel recording" href="/">Multi-channel recording</a></li>
+                </ul>
+              </li>
+              <li><a title="Interaction Analytics" href="/">Interaction Analytics</a></li>
+              <li>
+                <a title="PCI Compliance" href="/">PCI Compliance</a>
+                <ul>
+                  <li><a title="Live - DTMF" href="/">Live - DTMF</a></li>
+                  <li><a title="Automate" href="/">Automate</a></li>
+                  <li><a title="Archive" href="/">Archive</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-35 text right">
+            <div>
+              <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
+              <h2 class="headline-2">PCI DSS and the contact center</h2>
+              <p class="small-text"><img src="/assets/images/homework/img-about-overview-platform.png" class="l-megamenu__image" alt=""> Some text is here so you are impressed and you will click the button below.
+              </p>
+              <p>
+                <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="l-megamenu__layer" id="megamenu-item-3">
+          <div class="col-65 l-megamenu__links left">
+            <ul>
+              <li><a title="Support" href="/">Support</a></li>
+              <li><a title="Training" href="/">Training</a></li>
+              <li><a title="Consulting" href="/">Consulting</a></li>
+            </ul>
+          </div>
+          <div class="col-35 text right">
+            <div>
+              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
+              <h2 class="headline-2">Report about mobile payment gateways</h2>
+              <p class="small-text"><img src="/assets/images/homework/post2.png" class="l-megamenu__image" alt=""> An MNO service that doesn&#39;t require a SIM change
+              </p>
+              <p>
+                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inner-page">
+      <header class="inner-page__header inner-page__header--full-height inner-page__header--ico">
+
+          <div class="layout2 text text--bg-blue">
+              <h2 class="headline-8">Always happy to speak!</h2>
+              <h1 class="headline-1">Contact us</h1>
+              <p>Or come to meet us in London, in the office.</p>
+              <img class="inner-page__header__ico" src="/assets/images/homework/header-ico.png" alt="">
+          </div>
+
+      </header>
+
+      <div class="l-main l-main--inner-page" role="main">
+        <div class="page-section ">
+            <div class="layout2">
+                <div class="col-50 left">
+                      <div>
+                        <div class="text">
+                            <h3 class="headline-6">Let us help you</h3>
+                            <p>Does you business need professional payment gateway?</p>
+                            <p>Contact us to find out how our payment system works.</p>
+                            <p>&nbsp;</p>
+                        </div>
+
+
+
+                        <h2 class="headline-2">Connect</h2>
+
+                        <ul class="social-media social-media--white social-media--2-cols">
+                            <li>
+                                <a rel="external" title="Our profile at Twitter" href="">
+                                    <span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span> Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="external" title="Our profile at Google+" href="">
+                                    <span class="social-media__ico social-media__gplus"><span><span>Google+</span></span></span> Google+
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="external" title="Our profile at Facebook" href="">
+                                    <span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="external" title="Our profile at LinkedIn" href="">
+                                    <span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span> LinkedIn
+                                </a>
+                            </li>
+                        </ul>      
+                    </div>
+
+                  </div>
+                  <div class="col-50 left">
+                    <h2 class="headline-4">Contact us</h2>
+
+                    <form class="form" action="/contact" method="post">
+                        <div class="form__row">
+                            <label>
+                                Name
+                            </label>
+                            <input id="name" name="name" type="text" placeholder="Jenny Rosen" required>
+                        </div>
+                
+                        <div class="form__row">
+                            <label>
+                                Email Address
+                            </label>
+                            <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required>
+                        </div>
+                        
+                        <div class="form__row">
+                            <label>
+                                Message
+                            </label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+
+                        <script src="https://www.google.com/recaptcha/api.js?render=6Lc-XPUZAAAAAOiLd3INhvxz6joup8GNDQ3Iy-uL"></script>
+                        
+                        <button class="btn btn--bg-darkblue btn--border-blue" type="submit">Send</button>
+                    </form>
+                  </div>
+            </div>
+        </div>
+
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="l-footer">
+      <div class="l-footer__top">
+        <div class="layout">
+        <div class="col-15 left">
+            <a title="Home" href="/"><img src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42"></a>
+        </div>
+        <div class="col-85 l-footer__top-links right">
+            <ul>
+            <li>
+                <span>Platform</span>
+                <ul>
+                <li><a title="Platform Overview" href="">Platform Overview</a></li>
+                <li><a title="Management Center" href="/">Management Center</a></li>
+                <li>
+                    <a title="Modules" href="">Modules</a>
+                    <ul>
+                    <li><a title="Communications Capture" href="/">Capture</a></li>
+                    <li><a title="Communications Storage" href="/">Storage</a></li>
+                    <li><a title="Interaction Analytics" href="/">Analytics</a></li>
+                    </ul>
+                </li>
+                <li><a title="Cloud" href="/">Cloud</a></li>
+                </ul>
+            </li>
+            <li>
+                <span>Solutions</span>
+                <ul>
+                <li><a title="Solutions Overview" href="">Solution Overview</a></li>
+                <li>
+                    <a title="Call recording" href="">Call recording</a>
+                    <ul>
+                    <li><a title="Mobile recording" href="">Mobile recording</a></li>
+                    <li><a title="Fixed-Line recording" href="">Fixed-Line recording</a></li>
+                    <li><a title="Multi-channel recording" href="">Multi-channel recording</a></li>
+                    </ul>
+                </li>
+                <li><a title="Interaction Analytics" href="">Interaction Analytics</a></li>
+                <li>
+                    <a title="PCI Compliance" href="">PCI Compliance</a>
+                    <ul>
+                    <li><a title="Live - DTMF" href="">Live - DTMF</a></li>
+                    <li><a title="Automate" href="">Automate</a></li>
+                    <li><a title="Archive" href="">Archive</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <span>Services</span>
+                <ul>
+                <li><a title="Support" href="">Support</a></li>
+                <li><a title="Training" href="">Training</a></li>
+                <li><a title="Consulting" href="">Consulting</a></li>
+                </ul>
+                <span class="l-footer__top-links__partners">Partners</span>
+                <ul>
+                <li><a title="Partners Overview" href="">Partners Overview</a></li>
+                <li><a title="Solution Partners" href="">Solution Partners</a></li>
+                <li><a title="Consulting Partners" href="">Consulting Partners</a></li>
+                <li><a title="Resellers" href="">Resellers</a></li>
+                </ul>
+            </li>
+            <li>
+                <span>About Us</span>
+                <ul>
+                <li><a title="About" href="">About</a></li>
+                <li><a title="Leadership Team" href="">Leadership Team</a></li>
+                <li><a title="News" href="">News</a></li>
+                <li><a title="Events" href="">Events</a></li>
+                <li><a title="Customers" href="">Customers</a></li>
+                <li><a title="Careers" href="">Careers</a></li>
+                </ul>
+            </li>
+            <li>
+                <span>Resources</span>
+                <ul>
+                <li><a title="All Resources" href="">Resources</a></li>
+                <li><a title="White papers" href="">White papers</a></li>
+                <li><a title="Datasheets" href="">Datasheets</a></li>
+                <li><a title="eBooks" href="">eBooks</a></li>
+                </ul>
+            </li>
+            <li>
+                <span>Follow us</span>
+                <ul class="social-media social-media--blue">
+                <li>
+                    <a rel="external" title="Our profile at Twitter" href="">
+                    <span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span>
+                    </a>
+                </li>
+                <li>
+                    <a rel="external" title="Our profile at Google+" href="">
+                    <span class="social-media__ico social-media__gplus"><span><span>Google+</span></span></span>
+                    </a>
+                </li>
+                <li>
+                    <a rel="external" title="Our profile at Facebook" href="">
+                    <span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span>
+                    </a>
+                </li>
+                <li>
+                    <a rel="external" title="Our profile at LinkedIn" href="">
+                    <span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="l-footer__bottom">
+        <div class="layout">
+        <div class="col-50 l-footer__bottom-copyright left">
+            <span>© 20XX Web Dev Insider page to optimise</span> 
+            <span><a title="Privacy &amp; Cookie policy" href="/">Privacy &amp; Cookie policy</a></span> 
+        </div>
+        </div>
+    </div>
+    </footer>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>

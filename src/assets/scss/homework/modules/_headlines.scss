@@ -1,0 +1,72 @@
+.headline-1,
+.headline-2,
+.headline-3,
+.headline-4,
+.headline-5,
+.headline-6,
+.headline-7,
+.headline-8 {
+	font-family: 'proxima-nova', sans-serif;
+	display: block;
+	font-weight: 600;
+	line-height: 1.02;
+	padding-bottom: .55em;
+}
+
+.headline-1 {
+	font-size: 5em; // 85px
+}
+
+
+.headline-2 {
+	font-size: 2.531em; // 40.5px
+}
+
+.headline-2__smaller {
+	font-size: 28px;
+}
+
+
+.headline-3 {
+	font-size: 3.75em; // 60px
+
+	em {
+		font-style: normal;
+	}
+}
+
+
+.headline-4 {
+	font-size: 2.313em; // 37px
+}
+
+
+.headline-5 {
+	font-size: 3.188em; // 51px
+	letter-spacing: -0.01em;
+}
+
+.headline-6 {
+	font-size: 3.625em; // 58px
+	padding-bottom: 20px;
+}
+
+.headline-7 {
+	font-size: 1.813em; // 29px
+	letter-spacing: -0.009em;
+	line-height: 1.2;
+}
+
+.headline-8 {
+	font-size: 2em; // 32px
+}
+
+
+
+.headline__see-all {
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 10px;
+	padding-left: 15px;
+	border-left: 1px solid $darkgrey;
+}

@@ -1,0 +1,79 @@
+.btn-arrow {
+
+	a {
+		display: inline-block;
+		border-radius: 50%;
+
+		@include hidetext();
+		@include transition(all, 0.15s, ease-in);
+	}
+
+	&.big a {
+		width: 53px;
+		height: 53px;
+	}
+
+	&.small a {
+		width: 30px;
+		height: 30px;
+	}
+
+
+	/* white set */
+	&.white a {
+		border: 2px solid #d2d2d2;
+
+		&:hover {
+			border-color: $grey;
+		}
+	}
+
+	&.white.btn-arrow--left a {
+		background: #fff url(/assets/images/homework/btn-arrow-light-left.svg) center center no-repeat;
+
+		&:hover {
+			background-position: 7px center;
+		}
+	}
+
+
+	&.white.btn-arrow--right a {
+		background: #fff url(/assets/images/homework/btn-arrow-light-right.svg) center center no-repeat;
+
+		&:hover {
+			background-position: 13px center;
+		}
+	}
+
+
+
+
+
+
+	/* grey set */
+	&.grey a {
+		border: 2px solid #575757;
+
+		&:hover {
+			border-color: #fff;
+		}
+	}
+
+	&.grey.btn-arrow--left a {
+		background: $darkgrey3 url(/assets/images/homework/btn-arrow-dark-left.svg) center center no-repeat;
+
+		&:hover {
+			background-position: 15px center;
+		}
+	}
+
+
+	&.grey.btn-arrow--right a {
+		background: $darkgrey3 url(/assets/images/homework/btn-arrow-dark-right.svg) center center no-repeat;
+
+		&:hover {
+			background-position: 20px center;
+		}
+	}
+
+}

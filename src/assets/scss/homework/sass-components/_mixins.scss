@@ -1,0 +1,196 @@
+// =======================
+// sass-components/mixins
+// =======================
+
+
+
+// -----------------------
+// == Base
+// -----------------------
+
+// = Inline-block
+// -----------------------------
+@mixin inline-block (){
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// = Clearfix
+// -----------------------------
+@mixin clearfix () {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both
+    }
+}
+
+
+@mixin hidetext() {
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+@mixin prefixer ($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+
+        @if $prefix == webkit and $prefix-for-webkit == true {
+            -webkit-#{$property}: $value;
+        }
+        @else if $prefix == moz and $prefix-for-mozilla == true {
+            -moz-#{$property}: $value;
+        }
+        @else if $prefix == ms and $prefix-for-microsoft == true {
+            -ms-#{$property}: $value;
+        }
+        @else if $prefix == o and $prefix-for-opera == true {
+            -o-#{$property}: $value;
+        }
+        @else if $prefix == spec and $prefix-for-spec == true {
+            #{$property}: $value;
+        }
+        @else {
+            @warn "Unrecognized prefix: #{$prefix}";
+        }
+    }
+}
+
+
+// = Box-shadow
+// ------------------------------
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+       -moz-box-shadow:$top $left $blur $color #{$inset};
+            box-shadow:$top $left $blur $color #{$inset};
+}
+
+
+
+
+// = Border-radius
+// -----------------------------
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// = Transition
+// -----------------------------
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+     -moz-transition: $transition-property $transition-time $method;
+      -ms-transition: $transition-property $transition-time $method;
+       -o-transition: $transition-property $transition-time $method;
+          transition: $transition-property $transition-time $method;
+}
+
+
+
+// = UL
+// -----------------------------
+@mixin ul-list-inline() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        @include inline-block();
+    }
+}
+
+
+
+// = Transform
+// -----------------------------
+@mixin transform($property: none) {
+    @include prefixer(transform, $property, webkit moz ms o spec);
+}
+
+@mixin transform-origin($axes: 50%) {
+    @include prefixer(transform-origin, $axes, webkit moz ms o spec);
+}
+
+@mixin transform-style ($style: flat) {
+    @include prefixer(transform-style, $style, webkit moz ms o spec);
+}
+
+// = Keyframes
+// -----------------------------
+@mixin keyframes($name) {
+    $original-prefix-for-webkit: $prefix-for-webkit;
+    $original-prefix-for-mozilla: $prefix-for-mozilla;
+    $original-prefix-for-microsoft: $prefix-for-microsoft;
+    $original-prefix-for-opera: $prefix-for-opera;
+    $original-prefix-for-spec: $prefix-for-spec;
+
+    @if $original-prefix-for-webkit {
+        @include disable-prefix-for-all();
+        $prefix-for-webkit: true;
+        @-webkit-keyframes #{$name} {
+            @content;
+        }
+    }
+    @if $original-prefix-for-mozilla {
+        @include disable-prefix-for-all();
+        $prefix-for-mozilla: true;
+        @-moz-keyframes #{$name} {
+            @content;
+        }
+    }
+    @if $original-prefix-for-spec {
+        @include disable-prefix-for-all();
+        $prefix-for-spec: true;
+        @keyframes #{$name} {
+            @content;
+        }
+    }
+
+    $prefix-for-webkit: $original-prefix-for-webkit ;
+    $prefix-for-mozilla: $original-prefix-for-mozilla ;
+    $prefix-for-microsoft: $original-prefix-for-microsoft;
+    $prefix-for-opera: $original-prefix-for-opera ;
+    $prefix-for-spec: $original-prefix-for-spec ;
+}
+
+// = Calc
+// -----------------------------
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+
+
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}

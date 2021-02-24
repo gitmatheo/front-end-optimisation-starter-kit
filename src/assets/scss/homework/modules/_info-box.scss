@@ -1,0 +1,80 @@
+.info-box {
+	clear:both;
+	margin-top: 30px;
+
+	@include flexbox();
+	justify-content: space-between;
+
+	> div {
+		@include box-shadow(0px, 0px, 4px, 0px, rgba(0, 0, 0, 0.1));
+	}
+}
+
+.info-box__light {
+	background: #fff;
+
+	> div {
+		padding: 35px 30px 20px 30px;
+	}
+
+	p {
+		font-size: 1.66em;
+	}
+
+	.btn {
+		margin-bottom: 0;
+	}
+}
+
+
+.info-box__blue {
+	> div {
+		padding: 0 !important;
+		height: 100%;
+		@include flexbox();
+
+		.left {
+			background: url(/assets/images/homework/bg-box-grad-blue.jpg) center right no-repeat;
+			background-size: cover;
+
+			> * {
+				margin: 20px;
+			}
+		}
+	}
+
+}
+
+
+
+.info-box__product-tour {
+	background: url(/assets/images/homework/banner-bg.jpg) -150px bottom no-repeat;
+	position: relative;
+	height: 100%;
+	min-height: 472px;
+	overflow: hidden;
+	float: right;
+
+
+	img {
+		max-width: 700px;
+		position: absolute;
+		top: 20px;
+		right: -205%;
+	}
+
+
+	.btn {
+		opacity: 0;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		margin-left: -75px !important;
+	}
+}
+
+
+.fallback_no-flexbox {
+	display: block !important;
+	width: 100% !important;
+}

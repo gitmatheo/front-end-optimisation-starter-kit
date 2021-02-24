@@ -1,0 +1,22 @@
+.btn-play {
+	@include inline-block();
+	@include hidetext();
+
+	width: 28px;
+	height: 28px;
+
+	background: rgba(255, 255, 255, 0.9) url(/assets/images/homework/btn-play.svg) center center no-repeat;
+	background-size: 24px 28px;
+	border: 2px solid transparent;
+
+	padding: 25px;
+	@include border-radius(50%);
+
+	@include transition(all, 0.15s, ease-in);
+
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 1);
+		border-color: $blue1;
+	}
+}

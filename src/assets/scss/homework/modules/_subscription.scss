@@ -1,0 +1,17 @@
+.subscription {
+	padding: 30px 40px !important;
+	background: $grey url(/assets/images/homework/bg-dark-grain.png) !important;
+
+	text-align: center;
+}
+
+
+.subscription__rss {
+	@include inline-block();
+	@include hidetext();
+	width: 23px;
+	height: 23px;
+
+	background: url(/assets/images/homework/ico-rss.svg) no-repeat;
+	background-size: 23px 23px;
+}

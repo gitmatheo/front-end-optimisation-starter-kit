@@ -1,0 +1,10 @@
+.btn-close {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	padding: 10px;
+	@include hidetext();
+
+	background: url(/assets/images/homework/ico-close.svg) center center no-repeat;
+	background-size: 12px 12px;
+}

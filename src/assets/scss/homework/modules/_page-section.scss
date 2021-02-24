@@ -1,0 +1,404 @@
+.l-main {
+	.page-section {
+		padding: 4em 0;
+		position: relative;
+		clear: both;
+	}
+
+	.inner-page .page-section {
+	}
+
+
+	.page-section--services {
+		position: relative;
+		zoom: 1;
+		overflow: hidden;
+		padding: 4em 0;
+
+		color: $grey;
+
+
+		figure {
+			margin-bottom: 20px;
+		}
+
+		.layout > * {
+			padding-bottom: 32222px;
+			margin-bottom: -32222px;
+
+			p {
+				padding-bottom: 80px;
+			}
+
+			.btn {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+
+	.page-section--video {
+		text-align: center;
+
+		iframe {
+			display: inline-block;
+			max-width: 100%;
+		}
+	}
+
+	.page-section--global-map {
+		color: #fff;
+		text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+
+		background:
+			url(/assets/images/homework/map-dotted.png) center center no-repeat,
+			url(/assets/images/homework/bg-sec-grad-lime.svg) top center no-repeat;
+		background-size: auto auto, cover;
+		background-attachment: fixed, scroll;
+
+
+		&.page-section--global-map__home {
+			padding-bottom: 2em;
+			text-align: center;
+		}
+	}
+
+
+
+
+
+	@mixin triangle() {
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -17px;
+			z-index: 232;
+
+			display: block;
+			content: " ";
+
+
+			width: 34px;
+			height: 14px;
+			background-size: 34px 14px;
+		}
+	}
+
+
+	.page-section--triangle-white {
+		@include triangle();
+
+		&:before {
+			background: url(/assets/images/homework/sec-pointer-white.svg) no-repeat;
+		}
+	}
+
+
+	.page-section--triangle-black {
+		@include triangle();
+
+		&:before {
+			background: url(/assets/images/homework/sec-pointer-dark.svg) no-repeat;
+		}
+	}
+
+
+	.page-section--triangle-blue > * {
+		@include triangle();
+
+		&:before {
+			background: url(/assets/images/homework/sec-pointer-blue.svg) no-repeat;
+		}
+	}
+
+	.page-section--triangle-grey > * {
+		@include triangle();
+
+		&:before {
+			background: url(/assets/images/homework/sec-pointer-grey.svg) no-repeat;
+		}
+	}
+
+
+	.page-section--pci-blur {
+		padding-bottom: 2em;
+
+		background: #0c8abd url(/assets/images/homework/banner.jpg) top center no-repeat;
+		background-size: cover;
+
+		text-align: center;
+		font-family: "Lato";
+		color: #fff;
+
+		.headline-1 {
+			padding-bottom: 0.25em;
+			color: #fff;
+
+			@media screen and (min-width: 200px) and (max-width: 768px) {
+				font-size: 40px;
+			}
+
+			+ p {
+				color: #fff;
+			}
+		}
+	}
+
+	.page-section--lp {
+
+		&__item {
+			display: block;
+			width: 100%;
+			font-family: "Lato";
+			margin-bottom: 70px;
+
+			@media screen and (min-width: 200px) and (max-width: 768px) {
+				margin-bottom: 20px;
+			}
+
+			img {
+				float: left;
+				overflow: hidden;
+				width: 15%;
+				margin-top: -20px;
+
+				@media screen and (min-width: 200px) and (max-width: 767px) {
+					margin-top: 0;
+				}
+			}
+
+			.block-info {
+				float: left;
+				width: 85%;
+
+				.headline-4 {
+					font-size: 30px;
+					font-weight: 300;
+					color: #258bc9;
+					padding: 0 20px 10px 30px;
+
+					@media screen and (min-width: 200px) and (max-width: 768px) {
+						padding: 0 10px 10px 10px;
+					}
+				}
+
+				p {
+					font-size: 18px;
+					font-weight: 300;
+					color: #5f5f5f;
+					padding: 0 20px 0 30px;
+
+					@media screen and (min-width: 200px) and (max-width: 768px) {
+						padding: 0 10px 10px 10px;
+					}
+				}
+			}
+		}
+
+
+		@media screen and (min-width: 200px) and (max-width: 1023px) {
+			.col-33 {
+				width: 100%;
+				display: block;
+				margin-bottom: 0;
+			}
+		}
+
+		.clear {
+		&::before,
+		&::after {
+			content: '';
+			display: table;
+		}
+
+		&::after {
+			clear: both;
+		}
+		}
+	}
+
+	.page-section--lp-form {
+		background-color: #ebf1f4;
+		padding: 6em 0;
+
+		.headline-1 {
+			color: #258bc9;
+			font-family: "Lato";
+			font-weight: 300;
+			font-size: 60px;
+
+			@media screen and (min-width: 200px) and (max-width: 768px) {
+				font-size: 36px;
+			}
+		}
+
+		.desc {
+			font-size: 22px;
+			font-family: "Lato";
+			font-weight: 300;
+			color: #5f5f5f;
+		}
+
+		.gutter-right-40 {
+			padding-right: 40px;
+		}
+
+		.marketo-forms__body {
+
+			@media screen and (min-width: 200px) and (max-width: 768px) {
+				width: 100%;
+			}
+			.headline-2 {
+				font-family: "Lato";
+				font-weight: 300;
+				font-size: 40px;
+				color: #5f5f5f;
+
+				@media screen and (min-width: 200px) and (max-width: 768px) {
+					font-size: 24px;
+				}
+			}
+		}
+
+		@media screen and (max-width: 1023px) {
+			.col-45,
+			.col-55 {
+				width: 100%;
+				display: block;
+			}
+			.col-55 {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+
+	.page-section--bg-dark {
+		background: #131213 url(/assets/images/homework/bg-sec-dark-circles.png) top center repeat-x;
+
+		.text {
+			@extend .text--bg-grey;
+		}
+	}
+
+
+
+	.page-section--network {
+		padding-top: 120px;
+		text-align: center;
+		color: #fff;
+		text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+
+		background:
+			url(/assets/images/homework/bg-sec-fixed-network.png) bottom center no-repeat,
+			url(/assets/images/homework/bg-sec-grad-blue.svg) center center no-repeat;
+		background-size: auto auto, cover;
+
+		//background-attachment: fixed;
+
+		.headline-2 {
+			color: $lightblue2;
+		}
+
+		p {
+			max-width: 410px;
+			margin: 0 auto !important;
+		}
+	}
+
+
+
+
+	.page-section--home-light-bg {
+		background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.png) top center no-repeat;
+		color: #999;
+
+		.headline-6,
+		.layout3 .text > p {
+			text-align: center;
+		}
+
+		.headline-6 {
+			color: #4b5258;
+		}
+
+		.layout3 .text > p {
+			max-width: 1090px;
+			margin: 0 auto;
+		}
+	}
+
+
+
+	.page-section--grid-bg-color {
+		background: #f7f7f7;
+	}
+
+
+	.page-section--grid-bg-img {
+		background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.png) center 20px no-repeat;
+	}
+
+	.page-section--bg-white {
+		background: #fff;
+	}
+
+
+
+	.page-section--customers {
+		padding-bottom: 2em;
+
+		background-color: #0c8abd;
+		background-position: top center;
+		background-attachment: fixed;
+		background-size: cover;
+
+		text-align: center;
+
+		.text__bg-blue p {
+			max-width: 1120px;
+			margin: 0 auto;
+		}
+	}
+
+	.page-section--customers__logos {
+		margin: 30px 0;
+		@include clearfix();
+
+		li {
+			display: block;
+			float: left;
+
+			width: 20%;
+			margin-bottom: 25px;
+
+			img {
+				@include border-radius(5px);
+				max-width: 90%;
+			}
+		}
+	}
+
+	.page-section--customers__learn {
+		.btn {
+			margin-bottom: 0;
+		}
+	}
+
+
+
+	.page-section--no-padding-top {
+		padding-top: .5em;
+	}
+
+
+	.page-section--no-padding-bottom {
+		padding-bottom: 0;
+	}
+
+
+	.page-section--no-fixed-bg {
+		background-attachment: scroll, scroll;
+	}
+}

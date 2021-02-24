@@ -1,0 +1,227 @@
+/*
+   ---------------------- CMS/WEBSITE CONNECTION - PARAS, UL, OL, IMGS, HR ETC.
+*/
+
+      .text {
+
+          p:not(:last-child) {
+            margin: 0;
+            padding-bottom: 1.5em;
+          }
+
+          ul:not(:last-child), ol:not(:last-child) {
+            padding-bottom: 1.7em;
+          }
+
+          p {
+            margin-top: 0;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          p,
+          li {
+            font-size: 1.4em;
+            font-weight: 300;
+            letter-spacing: 0;
+            line-height: 1.41;
+          }
+
+          p + ul {
+            margin-top: -1em !important;
+          }
+
+
+
+
+          /* uls, ols */
+          ul {
+            padding-left: 50px;
+          }
+
+          ul, ol {
+            padding-top: 0.7em;
+            padding-bottom: 0.7em;
+            margin: 0;
+
+            li {
+              padding: 5px 0 20px 0;
+              position: relative;
+
+
+              &:before {
+                position: absolute;
+                top: 5px;
+                left: -50px;
+                overflow: hidden;
+
+                display: block;
+                content: " ";
+
+                width: 35px;
+                height: 35px;
+
+              }
+
+              &:last-child {
+                padding-bottom: 0;
+              }
+
+              li {
+                font-size: inherit;
+              }
+            }
+          }
+
+
+          &:not(.text--bg-grey), {
+          &:not(.text--bg-blue)
+
+            ul:not(.text__ul-downloads) li:before {
+              background: url(/assets/images/homework/list-tick-blue.svg) no-repeat;
+            }
+
+          }
+
+
+          .text__ul-downloads {
+            padding-left: 40px;
+
+            li:before {
+              background: url(/assets/images/homework/ico-download.svg) left 0 no-repeat;
+              background-size: 28px 28px;
+              left: -40px;
+            }
+          }
+
+
+
+
+
+          ol {
+            padding-left: 20px;
+
+            li {
+              padding-left: 5px;
+            }
+          }
+
+
+
+          .text__ul-2-cols {
+
+              li {
+                display: inline-block;
+                width: 48%;
+                vertical-align: top;
+
+                &:nth-child(2n)
+                {
+                    width: 49%;
+                    margin-left: 55px;
+                    margin-right: -55px;
+                }
+
+                &:nth-child(2n+1)
+                {
+                    clear:both;
+                }
+              }
+          }
+
+
+          .btn {
+            margin: 0.5em 0;
+          }
+
+
+          /* paras */
+          .small-text {
+            font-size: .95em;
+            line-height: 1.6
+          }
+
+          .medium-text {
+            font-size: 1.2em;
+          }
+
+
+          .big-text {
+            font-size: 1.235em;
+            line-height: 1.5;
+          }
+
+
+          blockquote {
+            margin: 0.5em 0;
+            padding: 5px 10px 10px 30px;
+            border-left: 4px solid #ccc;
+
+            p {
+              font-style: italic;
+            }
+
+            p:not(:last-child) {
+              font-size: 1.45em;
+              color: #8f8f8f;
+              line-height: 1.45;
+            }
+
+            p:last-child:not(:first-child) {
+              margin-top: -0.5em;
+              font-size: 1em;
+            }
+
+            cite {
+              font-style: normal;
+              line-height: 1.3;
+            }
+          }
+
+
+
+          hr {
+            border: 0; 
+            height: 1px; 
+            background: url(/assets/images/homework/hr.png) no-repeat;
+
+            margin: 2em 0;
+          }
+
+
+      }
+
+
+      .text--bg-grey {
+          color: #fff;
+
+          p, li {
+            color: #ededed;
+          }
+
+
+          ul li:before {
+            background: url(/assets/images/homework/list-tick-white.svg) no-repeat !important;
+          }
+
+          a:hover {
+            color: $lightblue;
+          }
+      }
+
+
+      .text--bg-blue {
+          text-shadow: 0px .5px .2px rgba(0, 0, 0, .5);
+          color: #f1f1f1;
+
+
+          ul li:before {
+            background: url(/assets/images/homework/list-tick-white.svg) no-repeat !important;
+          }
+
+          a:hover {
+            color: $lightblue;
+          }
+      }

@@ -1,0 +1,39 @@
+.l-main {
+	
+}
+
+.l-main--inner-page {
+	background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.png) center 100px no-repeat;
+
+	color: #4c5359;
+}
+
+
+.l-main .col-30:first-child > div,
+.l-main .col-33:first-child > div,
+.l-main .col-25:first-child > div,
+.l-main .col-50:first-child > div,
+.l-main .col-40:first-child > div,
+.l-main .col-60:first-child > div,
+.l-main .col-70:first-child > div,
+.l-main .col-55:first-child > div {
+    padding-right: 20px;
+}
+
+.l-main .col-33:nth-child(2) > div,
+.l-main .col-25:nth-child(2) > div,
+.l-main .col-25:nth-child(3) > div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.l-main .col-33:last-child > div,
+.l-main .col-25:last-child > div,
+.l-main .col-30:last-child > div,
+.l-main .col-40:last-child > div,
+.l-main .col-60:last-child > div,
+.l-main .col-70:last-child > div,
+.l-main .col-50:last-child > div,
+.l-main .col-45:last-child > div, {
+    padding-left: 20px;
+}

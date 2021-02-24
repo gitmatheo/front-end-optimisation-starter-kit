@@ -1,0 +1,151 @@
+.l-footer {
+	color: #fff;
+
+	a {
+		color: $lightblue;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+.l-footer__top {
+	padding: 55px 0 5px 0;
+	border-bottom: 1px solid #125985;
+
+	background: #000;
+}
+
+
+.l-footer__top-links {
+	> ul {
+		a {
+			display: block;
+			margin-right: 20px;
+		}
+
+		li {
+			padding: 5px 0;
+		}
+
+
+		> li {
+			float: left;
+			width: 20%;
+			margin-bottom: 20px;
+
+			> a,
+			> span {
+				color: #fff;
+				font-weight: 600;
+			}
+
+			> ul {
+				margin-top: 5px
+			}
+
+
+			.social-media {
+
+				li {
+					float: left;
+					margin: 0;
+
+					a {
+						margin-right: 8px;
+					}
+
+					&:last-child a {
+						margin-right: 0;
+					}
+				}
+			}
+
+
+			&:last-child {
+				float: right;
+			}
+		}
+
+		ul {
+			font-size: 0.95em;
+
+			ul {
+				margin-top: 5px;
+				li {
+					padding: 2px 0;
+				}
+
+				a {
+					color: #7fcde3;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.l-footer__bottom {
+	padding: 15px 0 20px 0;
+	background: #022c45;
+	border-top: 1px solid #0d3750;
+
+	font-size: .9em;
+	color: #3082b4;
+	font-weight: 600px;
+
+	span, a {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	a {
+		color: #3082b4;
+	}
+}
+
+
+.l-footer__top-links__partners {
+	display: inline-block;
+	padding-top: 30px;
+}
+
+
+
+.l-footer__bottom-copyright span:first-child:after,
+.l-footer__bottom-copyright span:nth-child(2):after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 1px;
+	height: 20px;
+	background: #2f81b3;
+	margin: 0 10px;
+}
+
+
+.l-footer__bottom-snowflake {
+	text-align: right;
+
+	a {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 81px;
+		height: 24px;
+		background: url(/assets/images/homework/logo-snowflake.svg) top center no-repeat;
+		background-size: 81px 60px;
+
+		margin-left: 5px;
+
+		@include hidetext();
+		@include transition(all, 0.15s, ease-in);
+
+		&:hover {
+			background-position: bottom center;
+		}
+	}
+}

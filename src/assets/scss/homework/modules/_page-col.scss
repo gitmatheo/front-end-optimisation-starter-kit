@@ -1,0 +1,13 @@
+.page-col__img-margin-top {
+	margin-top: 8%;
+}
+
+.counter {
+	@include inline-block();
+	width: 70px;
+	text-align: center;
+}
+
+.page-col__contact-btn {
+	margin-top: 50px;
+}

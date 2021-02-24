@@ -1,0 +1,53 @@
+.pagination {
+	display: block;
+	clear: both;
+	text-align: center;
+	padding: 30px 0;
+
+
+	ul {
+		display: inline-block;
+		background: #fff;
+
+		@include box-shadow(0px, 1px, 5px, 0px rgba(50, 50, 50, 0.1));
+	}
+
+	li, a {
+		display: inline-block;
+	}
+
+	a {
+		padding: 13px 10px;
+		font-size: 16px;
+		@include transition(background, 0.2s, ease-out);
+
+		&.pagination__prev,
+		&.pagination__next {
+			padding-left: 25px;
+			padding-right: 25px;
+
+			&.inactive {
+				color: #ccc;
+				cursor: default;
+			}
+		}
+
+		&.pagination__prev {
+			margin-right: 20px;
+		}
+
+		&.pagination__next {
+			margin-left: 20px;
+		}
+
+		&:not(.inactive):hover {
+			background: $blue1;
+			color: #fff;
+		}
+
+		&.active {
+			background: $navyblue;
+			color: #fff;
+		}
+	}
+}

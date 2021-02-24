@@ -1,0 +1,182 @@
+.l-home-banner {
+	position: relative;
+	width: 100%;
+	height: 800px;
+
+	.layout {
+		position: relative;
+		z-index: 2;
+		padding-top: 100px;
+	}
+
+	.headline-1,
+	p,
+	img,
+	.l-home-banner__3-cols > div,
+	.home-banner__anim,
+	.btn--arrow-down {
+		opacity: 0;
+	}
+
+
+	.btn--arrow-down {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		z-index: 4;
+		
+		margin-left: 35px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-color: $darkgrey;
+		opacity: 0.8;
+	}
+}
+
+
+.home-banner__content {
+	max-width: 700px;
+
+	.headline-1 {
+		color: #fff;
+		text-shadow: 0px 1px .2px rgba(0, 0, 0, .2);
+	}
+
+	p {
+		color: $lightblue;
+		text-shadow: 0px 1px .4px rgba(0, 0, 0, .4);
+	}
+}
+
+
+
+
+
+.l-home-banner__3-cols {
+	@include clearfix();
+	margin-bottom: 30px;
+
+	> div {
+		position: relative;
+		float: left;
+		font-size: 0.9em;
+
+		&:first-child {
+			width: 30%;
+			margin-right: 2%; 
+		}
+
+		&:nth-child(2) {
+			width: 33%;
+		}
+
+		&:nth-child(3) {
+			width: 32%;
+		}
+
+		&:not(:first-child) {
+
+			p {
+				margin-left: 20px;
+			}
+
+
+			&:before {
+				position: absolute;
+				top: -8px;
+
+				width: 2px;
+				height: 74px;
+				content : "";
+
+				background: url(/assets/images/homework/sep-banner.png) no-repeat;
+			}
+		}
+	}
+
+}
+
+.text .l-home-banner__3-cols p {
+	line-height: 1.2;
+	
+
+	a {
+		color: #fff;
+
+		&:hover {
+			color: #d1f6ff;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.home-banner__anim {
+    position: absolute;
+    right: -170px;
+    top:40px;
+
+    width: 67%;
+    max-width: 950px;
+    height: auto;
+
+	img {
+	    position: absolute;
+	    top:0; 
+	    left:0;
+
+	    width: 100%;
+	    height: auto;
+	}
+
+	#resizer {
+	    position: relative;
+
+	}
+	#chart-1 {
+	    left:52.7%;
+	    top:34.2%;
+
+	    width: 2.421%;
+	    height: auto;    
+	}
+	#chart-2 {
+	    left:56.3%;
+	    top:41.7%;
+
+	    width: 2.421%;
+	    height: auto;    
+	}
+
+	#chart-3 {
+	    left:59.0%;
+	    top:55.7%;
+
+	    width: 2.421%;
+	    height: auto;    
+	}
+}
+
+
+
+.l-home__news {
+	padding-bottom: 50px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #d6d8d7;
+}
+
+
+

@@ -1,0 +1,168 @@
+.l-navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 4000;
+
+	width: 100%;
+	height: 80px;
+	overflow: hidden;
+
+	background: #fff;
+	@include box-shadow(0, 0, 4px, rgba(0, 0, 0, 0.3));
+
+
+
+	.logo {
+		float: left;
+		margin: 11px 0 0 20px;
+	}
+
+
+}
+
+
+
+.navbar-menu {
+	float: right;
+
+	li,
+	li a,
+	span {
+		display: inline-block;
+	}
+
+	li {
+			vertical-align: top;
+
+
+
+		&.navbar-menu__dropdown {
+			a {
+			   background: url(/assets/images/homework/nav-arrow-down.svg) 50px center no-repeat;
+			   background-size: 19px 6px;
+
+			    &:hover,
+			    &.active {
+		    		padding-left: 14px;
+		    		padding-right: 26px;
+		    		background-position: right center;
+
+			    }
+
+		    	&:hover {
+		    		background-color: $blue1;
+		    	}
+
+
+		        &.active-item {
+				    padding-left: 14px;
+				    padding-right: 26px;
+				    background-position: right center;
+
+		            background-color: #efefef;
+		            -webkit-box-shadow: inset 0px 3px 4px 0px rgba(0, 0, 0, 0.16);
+		            -moz-box-shadow:    inset 0px 3px 4px 0px rgba(0, 0, 0, 0.16);
+		            box-shadow:         inset 0px 3px 4px 0px rgba(0, 0, 0, 0.16);
+		            background-image: url(/assets/images/homework/nav-arrow-down-hover.svg);
+
+		            &:hover {
+		                background-image: url(/assets/images/homework/nav-arrow-down.svg);
+		                background-color: $blue1;
+		                color: #fff;
+		            }
+		        }
+
+
+
+		    	&.active {
+				    background-color: $darkgrey;
+				    color: #fff;
+		    	}
+			}
+
+
+		}
+
+
+		a {
+			vertical-align: middle;
+		    padding: 31px 20px 26px 20px;
+		    border-left: 1px solid #ced0d1; 
+
+		    font-size: 17px;
+		    font-weight: 600;
+		    text-transform: uppercase;
+		    letter-spacing: 0.03em;
+
+		    color: #576369;
+
+		    @include transition(all, 0.2s, ease-in-out);
+
+
+		    &:hover {
+		    	background-color: $blue1;
+		    	color: #fff;
+		    }
+
+
+
+		    &.navbar-menu__search {
+		    	padding-bottom: 26px;
+
+		    	span {
+				    width: 19px;
+				    height: 19px;
+
+				    background: url(/assets/images/homework/ico-search.svg) top center no-repeat;
+				    background-size: 19px 40px;
+
+				    @include hidetext();
+		    	}
+
+
+		    	&:hover span {
+		    		background-position: bottom center;
+		    	}
+		    }
+
+
+
+	        &.active-item {
+			    background-position: right center;
+
+	            background-color: #efefef;
+	            -webkit-box-shadow: inset 0px 3px 4px 0px rgba(0, 0, 0, 0.16);
+	            -moz-box-shadow:    inset 0px 3px 4px 0px rgba(0, 0, 0, 0.16);
+	            box-shadow:         inset 0px 3px 4px 0px rgba(0, 0, 0, 0.16);
+
+	            &:hover {
+	                background-color: $blue1;
+	                color: #fff;
+	            }
+	        }
+		}
+
+
+
+	}
+}
+
+
+
+.l-navbar__burger {
+	position: relative;
+	top: 20px;
+	right: 10px;
+	display: none;
+	width: 19px;
+	height: 17px;
+	padding: 10px;
+	float: right;
+
+	@include hidetext();
+
+	background: url(/assets/images/homework/ico-burger.svg) center center no-repeat;
+	background-size: 19px 17px;
+}

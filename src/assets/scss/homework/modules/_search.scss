@@ -1,0 +1,51 @@
+.search {
+	@extend .overlay;
+}
+
+.search {
+	background: rgba(0, 0, 0, .95) !important;
+	z-index: 2323233 !important;
+
+	.layout3 {
+		display: none;
+		padding-top:150px;
+		position: relative;
+
+		.text p {
+			color: #555;
+		}
+	}
+
+	input {
+		width: 100%;
+		background: transparent;
+		border: 0;
+		padding-bottom: .5em;
+		border-bottom: 2px solid $grey;
+
+		font-size: 5em;
+		color: #fff;
+	}
+}
+
+.search__btn-close {
+	position: fixed;
+	top: 25px;
+	right: 30px;
+}
+
+
+.search__submit {
+	position: absolute;
+	bottom: 70px;
+	right: 0;
+
+
+	display: inline-block;
+	@include hidetext();
+	width: 50px;
+	height: 55px;
+
+	background: url(/assets/images/homework/ico-search-large.svg) no-repeat;
+	background-size: 50px 55px;
+}

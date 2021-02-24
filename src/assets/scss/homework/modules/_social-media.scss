@@ -1,0 +1,182 @@
+.social-media {
+	li,
+	a,
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+
+	a,
+	span {
+		border-radius: 50%;
+	}
+
+	a > span {
+		@include transition(background, 0.3s, ease-out);
+
+		> span > span {
+			@include transition(background, 0.2s, ease-in);
+		}
+
+		&:hover {
+			background-position: -200px;
+		}
+	}
+}
+
+
+.social-media--white {
+	a {
+		> span {
+			background: rgb(25,166,214);
+			background: url(/assets/images/homework/btn-grad-blue.svg);
+			padding: 2px;
+
+
+			@each $ico in facebook, linkedin, twitter, gplus, share {
+				&.social-media__#{$ico} > span > span {
+					background: url(/assets/images/homework/btn-#{$ico}.svg) top center no-repeat;
+				}
+			}
+
+
+			> span {
+				background: #fff;
+				padding: 7px;
+
+				> span {
+					width: 30px;
+					height: 30px;
+					background-size: 30px 80px;
+
+					@include hidetext();
+				}
+			}
+
+		}
+
+		&:hover {
+			> span > span {
+				background: #ededed;
+
+
+				> span {
+					background-position: bottom center;
+				}
+			}
+		}
+	}
+
+
+}
+
+
+
+.social-media--blue {
+
+	a {
+		> span {
+			background: rgb(25,166,214);
+			background: url(/assets/images/homework/btn-grad-blue.svg);
+			padding: 2px;
+
+
+
+			@each $ico in facebook, linkedin, twitter, gplus {
+				&.social-media__#{$ico} > span > span {
+					background: url(/assets/images/homework/btn-#{$ico}-white.svg) top center no-repeat;
+				}
+			}
+
+
+			> span {
+				background: $navyblue;
+				padding: 7px;
+
+				> span {
+					width: 23px;
+					height: 23px;
+					background-size: 23px 50px;
+
+					@include hidetext();
+				}
+			}
+		}
+
+		&:hover {
+			> span > span {
+				background: #fff;
+
+
+				> span {
+					background-position: bottom center;
+				}
+			}
+		}
+
+	}
+}
+
+
+
+
+.social-media--2-cols {
+	@include clearfix();
+	
+	li {
+		float: left;
+		width: 50%;
+		margin: 4px 0;
+
+		a {
+			font-size: 1.25em;
+			font-weight: 600;
+		}
+
+		.social-media__ico {
+			margin-right: 10px;
+		}
+	}
+}
+
+
+
+.social-media--share {
+		display: inline-block;
+		margin-left: 5px;
+
+		> li {
+			position: relative;
+
+			>a {
+				-ms-touch-action: none;
+				touch-action: none;
+			}
+
+
+			ul {
+				position: absolute;
+				top: -8px;
+				left: -5px;
+				z-index: 50;
+				opacity: 0;
+				background: #fff;
+				padding: 5px;
+
+				width: 207px;
+				@include border-radius(20px);
+				@include transition(all, 0.2s, ease-in);
+
+				li {
+					display: inline-block;
+					margin: 3px 0;
+				}
+			}
+
+
+			&:hover ul {
+				opacity: 1;
+			}
+		}
+}

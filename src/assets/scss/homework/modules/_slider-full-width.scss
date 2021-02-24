@@ -1,0 +1,127 @@
+.slider-full-width {
+	width: 90%;
+	position: relative;
+	margin: 0 auto;
+
+
+	/* slides */
+	section {
+		height: 500px;
+
+		figure {
+			float: left;
+			margin-right: 60px;
+		}
+
+		.text {
+			overflow: hidden;
+
+			p {
+				max-width: 410px;
+			}
+		}
+	}
+
+
+
+	.slider-full-width__pager {
+		text-align: center;
+
+		li, a {
+			display: inline-block
+		}
+
+
+		li {
+			position: relative;
+		}
+
+		a {
+			min-width: 185px;
+			padding-top: 13px;
+			padding-bottom: 13px;
+
+			color: #fff;
+			font-size: 19.2px;
+			font-weight: 600;
+			line-height: 1.02;
+			text-shadow: 0px 1px 0px rgba( 0, 0, 0, 0.3 );
+
+			background-color: #676767;
+
+			@include box-shadow(0px, 3px, 4px, rgba(0,0,0,0.5));
+			@include transition(all, 0.2s, ease-in-out);
+
+			&:hover {
+				background-color: #999;
+			}
+
+			&.active {
+
+				&:before {
+					position: absolute;
+					top: -9px;
+					left: 50%;
+					margin-left: -11px;
+					display: block;
+
+				    content: "";
+				    width: 22px;
+				    height: 9px;
+				}
+			}
+
+
+
+			&.blue.active {
+				background: $blue1;
+
+				&:before {
+					background: url(/assets/images/homework/top-arrow-capture.png);
+				}
+			}
+
+			&.green.active {
+				background: $green;
+
+				&:before {
+					background: url(/assets/images/homework/top-arrow-store.png);
+				}
+			}
+
+			&.orange.active {
+				background: $orange;
+
+				&:before {
+					background: url(/assets/images/homework/top-arrow-analyze.png);
+				}
+			}
+
+			&.red.active {
+				background: $red;
+
+
+				&:before {
+					background: url(/assets/images/homework/top-arrow-consume.png);
+				}
+			}
+		}
+	}
+}
+
+
+
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	margin-top: -28.5px;
+
+
+	&.btn-arrow--left {
+		left: 0;
+	}
+
+	&.btn-arrow--right {
+		right: 0;
+	}
+}
